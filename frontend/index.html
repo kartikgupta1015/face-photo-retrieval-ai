@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Download My Photos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .card {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 320px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      input[type="file"] {
+        margin: 15px 0;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+
+      .note {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Find Your Photos</h2>
+
+      <form
+        action="http://127.0.0.1:8000/download-matched"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="file" name="file" accept="image/*" required />
+        <br />
+
+        <button type="submit">Download My Photos</button>
+      </form>
+
+      <div class="note">
+        Upload a clear selfie to get all your event photos.
+      </div>
+    </div>
+  </body>
+</html>
