@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+torch
+torchvision
+facenet-pytorch
+opencv-python-headless
+numpy
+python-multipart
+faiss-cpu
